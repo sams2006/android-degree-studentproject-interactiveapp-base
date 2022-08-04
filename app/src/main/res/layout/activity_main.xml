@@ -35,13 +35,16 @@
         app:srcCompat="@drawable/park" />
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
@@ -51,10 +54,11 @@
         android:text="@string/suggest"
         android:textColor="@android:color/white"
         android:textSize="22sp"
+        android:onClick="Suggest"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintLeft_toRightOf="@+id/imageButton2"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <ImageButton
@@ -63,9 +67,10 @@
         android:layout_height="0dp"
         android:background="@drawable/button_left"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="displayNext"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintLeft_toRightOf="@+id/button"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:srcCompat="@drawable/ic_arrow_right_white_24dp" />
 
@@ -74,10 +79,9 @@
         android:layout_width="50dp"
         android:layout_height="0dp"
         android:background="@drawable/button_right"
+        android:onClick="displayPrevious"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:srcCompat="@drawable/ic_arrow_left_white_24dp" />
 

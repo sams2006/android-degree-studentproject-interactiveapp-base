@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">Suggest a place or activity</string>
     <string name="suggest">Suggest</string>
+    <string name="beach">beach</string>
+    <string name="bicycle">bicycle</string>
+    <string name="football">Football</string>
+    <string name="museum">Museum</string>
+    <string name="park">Park</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="running">running</string>
+    <string name="shopping">shopping</string>
+    <string name="swimming">swimming</string>
+    <string name="walk">walk</string>
+    <string name="done">back</string>
+
+    <string-array name="names">
+
+        <item>beach</item>
+        <item>bicycle</item>
+        <item>football</item>
+        <item>museum</item>
+        <item>park</item>
+        <item>restaurant</item>
+        <item>running</item>
+        <item>shopping</item>
+        <item>swimming</item>
+        <item>walk</item>
+    </string-array>
 </resources>
