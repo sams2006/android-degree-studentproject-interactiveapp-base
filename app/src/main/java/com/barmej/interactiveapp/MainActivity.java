@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Suggest(View view) {
-        count = random.nextInt(10) ;
+        count = random.nextInt(arrayImage.length);
         showImageAndTitle();
     }
 
@@ -66,21 +66,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayNext(View view) {
-        count++ ;
-        if (count > -1 && count < 10 ){
+
+        if (count > -2 && count < 9) {
+            count++;
             showImageAndTitle();
+
         } else {
-            Toast.makeText(this ,R.string.done , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.done, Toast.LENGTH_SHORT).show();
+            count = 9;
+            showImageAndTitle();
         }
+
 
     }
 
     public void displayPrevious(View view) {
-        count-- ;
-        if (count > -1 && count < 10 ) {
+
+        if (count < 10 && count >= 1) {
+            count--;
             showImageAndTitle();
+
+
         } else {
-            Toast.makeText(this , R.string.done , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.done, Toast.LENGTH_SHORT).show();
         }
 
     }
