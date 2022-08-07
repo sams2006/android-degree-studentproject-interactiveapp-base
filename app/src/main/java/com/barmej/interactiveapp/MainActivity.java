@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayNext(View view) {
 
-        if (count > -2 && count < 9) {
+        if (count > -2 && count < (arrayImage.length) - 1) {
             count++;
             showImageAndTitle();
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayPrevious(View view) {
 
-        if (count < 10 && count >= 1) {
+        if (count < arrayImage.length && count >= 1) {
             count--;
             showImageAndTitle();
 
