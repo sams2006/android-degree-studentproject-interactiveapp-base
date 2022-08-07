@@ -16,28 +16,27 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageView ;
-    TextView textView ;
-    Button button ;
-    Random random = new Random() ;
-    int count = -1 ;
-    private static final String BUNDLE = "BUNDLE" ;
-    String[] arrayNames ;
+    private static final String BUNDLE = "BUNDLE";
+    ImageView imageView;
+    TextView textView;
+    Button button;
+    Random random = new Random();
+    int count = -1;
+    String[] arrayNames;
 
 
     int[] arrayImage = {
-            R.drawable.beach ,
-            R.drawable.bike ,
-            R.drawable.football ,
-            R.drawable.museum ,
-            R.drawable.park ,
-            R.drawable.restaurant ,
-            R.drawable.running ,
-            R.drawable.shop ,
-            R.drawable.swimming ,
-            R.drawable.walking ,
-    } ;
-
+            R.drawable.beach,
+            R.drawable.bike,
+            R.drawable.football,
+            R.drawable.museum,
+            R.drawable.park,
+            R.drawable.restaurant,
+            R.drawable.running,
+            R.drawable.shop,
+            R.drawable.swimming,
+            R.drawable.walking,
+    };
 
 
     @Override
@@ -45,11 +44,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageView = findViewById(R.id.imageView) ;
+        imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.textView);
-        button = findViewById(R.id.button) ;
-        arrayNames = getResources().getStringArray(R.array.names) ;
-
+        button = findViewById(R.id.button);
+        arrayNames = getResources().getStringArray(R.array.names);
 
 
     }
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         showImageAndTitle();
     }
 
-    private void showImageAndTitle () {
+    private void showImageAndTitle() {
 
         imageView.setImageResource(arrayImage[count]);
         textView.setText(arrayNames[count]);
